@@ -24,7 +24,7 @@ exports.courseEnrollmentEmail = (courseName, name, courseImageUrl) => {
             }
     
             .logo {
-                max-width: 200px;
+                max-width: 240px;
                 margin-bottom: 20px;
             }
     
@@ -73,7 +73,7 @@ exports.courseEnrollmentEmail = (courseName, name, courseImageUrl) => {
     
     <body>
         <div class="container">
-            <a href=""><img class="logo" src="https://i.ibb.co/7Xyj3PC/logo.png"
+            <a href=""><img class="logo" src="https://nightshift-academy.netlify.app/email-logo.png"
                     alt="NightShift Academy Logo"></a>
             <div class="message">Course Registration Confirmation</div>
             <div class="body">

@@ -24,7 +24,7 @@ exports.passwordReset = (email, name, resetLink) => {
             }
     
             .logo {
-                max-width: 200px;
+                max-width: 240px;
                 margin-bottom: 20px;
             }
     
@@ -63,7 +63,7 @@ exports.passwordReset = (email, name, resetLink) => {
     <body>
         <div class="container">
             <a href=""><img class="logo"
-                    src="https://i.ibb.co/7Xyj3PC/logo.png" alt="NightShift Academy Logo"></a>
+                    src="https://nightshift-academy.netlify.app/email-logo.png" alt="NightShift Academy Logo"></a>
             <div class="message">Password Reset Request</div>
             <div class="body">
                 <p>Hi ${name},</p>

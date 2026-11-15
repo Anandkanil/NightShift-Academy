@@ -24,7 +24,7 @@ const otpTemplate = (otp) => {
 			}
 	
 			.logo {
-				max-width: 200px;
+				max-width: 240px;
 				margin-bottom: 20px;
 			}
 	
@@ -67,7 +67,7 @@ const otpTemplate = (otp) => {
 	<body>
 		<div class="container">
 			 <a href="">
-			 <img src="https://i.ibb.co/8X3P5Q0/email-logo.png" alt="NightShift Academy Logo" class="logo">
+			 <img src="https://nightshift-academy.netlify.app/email-logo.png" alt="NightShift Academy Logo" class="logo">
 			 </a>
 			 <div class="message">OTP Verification Email</div>
 			 <div class="body">

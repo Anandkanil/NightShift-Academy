@@ -25,7 +25,7 @@ exports.paymentSuccessEmail = (name, amount, orderId, paymentId) => {
               }
       
               .logo {
-                  max-width: 200px;
+                  max-width: 240px;
                   margin-bottom: 20px;
               }
       
@@ -67,7 +67,7 @@ exports.paymentSuccessEmail = (name, amount, orderId, paymentId) => {
       
       <body>
           <div class="container">
-              <a href=""><img class="logo" src="https://i.ibb.co/7Xyj3PC/logo.png"
+              <a href=""><img class="logo" src="https://nightshift-academy.netlify.app/email-logo.png"
                       alt="NightShift Academy Logo"></a>
               <div class="message">Course Payment Confirmation</div>
               <div class="body">

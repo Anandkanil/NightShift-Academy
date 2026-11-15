@@ -24,7 +24,7 @@ exports.passwordUpdated = (email, name) => {
             }
     
             .logo {
-                max-width: 200px;
+                max-width: 240px;
                 margin-bottom: 20px;
             }
     
@@ -55,7 +55,7 @@ exports.passwordUpdated = (email, name) => {
     <body>
         <div class="container">
             <a href=""><img class="logo"
-                    src="https://i.ibb.co/7Xyj3PC/logo.png" alt="NightShift Academy Logo"></a>
+                    src="https://nightshift-academy.netlify.app/email-logo.png" alt="NightShift Academy Logo"></a>
             <div class="message">Password Update Confirmation</div>
             <div class="body">
                 <p>Hey ${name},</p>
