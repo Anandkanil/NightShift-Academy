@@ -115,7 +115,7 @@ function DashboardPreview() {
     <div className="sn-fade-bottom mx-auto w-full max-w-[980px] px-4 sm:px-6" aria-hidden="true">
       <div className="flex overflow-hidden rounded-2xl border border-ink/10 bg-bg/90">
         <div className="hidden w-[200px] shrink-0 flex-col gap-1 border-r border-ink/10 p-3 text-[13px] font-medium md:flex">
-          <p className="mb-3 ml-2 text-base font-bold text-ink">StudyNotion</p>
+          <p className="mb-3 ml-2 text-base font-bold text-ink">NightShift Academy</p>
           {["Dashboard", "Your courses", "Saved lessons", "Purchases", "Settings"].map((item, i) => (
             <span key={item} className={`rounded-lg px-2.5 py-2 ${i === 0 ? "bg-raised text-ink" : "text-muted"}`}>
               {item}
@@ -199,7 +199,7 @@ const TABS = [
     title: "Pick up where you stopped",
     rows: ["The player remembers your spot in every lesson", "Course announcements show above the video"],
     points: [
-      ["Resume in one click", "StudyNotion keeps your place in every lesson, on this device."],
+      ["Resume in one click", "NightShift Academy keeps your place in every lesson, on this device."],
       ["Every lesson counts", "Finished lessons grow your progress and your daily streak."],
       ["Stay in the loop", "Instructor announcements appear right on the lesson page."],
     ],
@@ -240,7 +240,7 @@ const FAQ = [
   {
     topic: "Courses and access",
     items: [
-      ["How long can I watch a course?", "For as long as StudyNotion runs. You pay once for each course."],
+      ["How long can I watch a course?", "For as long as NightShift Academy runs. You pay once for each course."],
       ["Can I try a course first?", "Yes. The first lesson of every course is free to watch from its page."],
     ],
   },
@@ -327,7 +327,7 @@ function Home() {
           <span className="rounded-full bg-raised px-3 py-1 text-[13px] font-medium text-ink">Courses by engineers who build for a living</span>
           <h1 className="text-[clamp(2.3rem,5.6vw,3.75rem)] font-bold leading-[1.12] tracking-[-0.025em] text-ink">
             Learn the skills teams hire for
-            <span className="block font-serif font-normal tracking-[-0.01em]">with StudyNotion</span>
+            <span className="block font-serif font-normal tracking-[-0.01em]">with NightShift Academy</span>
           </h1>
           <p className="max-w-[600px] text-[17px] leading-relaxed text-muted">
             Video courses in web development, cloud and security, with notes and questions under every lesson, a daily streak, and a certificate when you finish.

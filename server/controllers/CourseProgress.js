@@ -10,7 +10,7 @@ const mailSender = require("../utils/mailSender")
 const { courseCompletionEmail } = require("../mail/templates/courseCompletionEmail")
 const { recordLesson, summarize } = require("../utils/learningDays")
 
-const FRONTEND_URL = (process.env.FRONTEND_URL || "https://studynotion-project-1.netlify.app").replace(/\/$/, "")
+const FRONTEND_URL = (process.env.FRONTEND_URL || "https://nightshift-academy.netlify.app").replace(/\/$/, "")
 
 // What changed for the learner with this lesson, so the player can celebrate it.
 // firstToday: the first lesson of the day (the streak just grew).

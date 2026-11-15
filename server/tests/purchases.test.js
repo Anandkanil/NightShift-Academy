@@ -64,7 +64,7 @@ let passed = 0; const test = async (n, fn) => { try { await fn(); passed++; cons
   fakes['models/Purchase'].exists = async (q) => purchases.has(q.orderId);
   const before = purchases.size;
   const { backfillPurchases } = require(SRV + '/utils/backfillPurchases');
-  await test('backfill adds only paid StudyNotion orders that have no receipt', async () => {
+  await test('backfill adds only paid NightShift Academy orders that have no receipt', async () => {
     fakes['models/Purchase'].updateOne = async (q, u) => { if (purchases.has(q.orderId)) return { upsertedCount: 0 }; purchases.set(q.orderId, u.$setOnInsert); return { upsertedCount: 1 }; };
     const r = await backfillPurchases();
     assert.strictEqual(r.added, 1); assert.strictEqual(purchases.size, before + 1);

@@ -63,7 +63,7 @@ const Legal = lazy(() => import("./pages/Legal"));
 
 // Browser-tab titles per route (pages with live data may refine them)
 export const TITLES = [
-  [/^\/$/, "StudyNotion — Video courses in web, cloud, AI and security"],
+  [/^\/$/, "NightShift Academy — Video courses in web, cloud, AI and security"],
   [/^\/login/, "Log in"],
   [/^\/signup/, "Create your account"],
   [/^\/about/, "About"],
@@ -105,7 +105,7 @@ function useRouteTitle(pathname) {
   useEffect(() => {
     const match = TITLES.find(([re]) => re.test(pathname));
     const title = match ? match[1] : "Page not found";
-    document.title = pathname === "/" ? title : `${title} · StudyNotion`;
+    document.title = pathname === "/" ? title : `${title} · NightShift Academy`;
   }, [pathname]);
 }
 

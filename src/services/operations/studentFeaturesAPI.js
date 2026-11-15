@@ -72,7 +72,7 @@ export async function buyCourse(token, courses, userDetails, navigate, dispatch,
             currency: orderResponse.data.message.currency,
             amount: `${orderResponse.data.message.amount}`,
             order_id: orderResponse.data.message.id,
-            name: "StudyNotion", // Payment description (e.g., course name)
+            name: "NightShift Academy", // Payment description (e.g., course name)
             description: courses.length > 1 ? `${courses.length} courses` : "Course purchase",
             image: rzpLogo, // Logo to be displayed during payment
             prefill: {

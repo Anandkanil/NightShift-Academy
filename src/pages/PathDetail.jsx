@@ -25,7 +25,7 @@ export default function PathDetail() {
     try {
       const res = await apiConnector("GET", `${courseEndpoints.PATHS_API}/${encodeURIComponent(slug)}`);
       setState({ status: "ready", path: res.data?.data });
-      document.title = `${res.data?.data?.title || "Path"} · StudyNotion`;
+      document.title = `${res.data?.data?.title || "Path"} · NightShift Academy`;
     } catch (e) {
       setState({ status: e.response?.status === 404 ? "missing" : "failed", path: null });
     }

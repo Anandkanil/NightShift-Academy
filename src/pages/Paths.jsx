@@ -27,7 +27,7 @@ export default function Paths() {
   }, []);
 
   useEffect(() => {
-    document.title = "Guided paths · StudyNotion";
+    document.title = "Guided paths · NightShift Academy";
     load();
   }, [load]);
 

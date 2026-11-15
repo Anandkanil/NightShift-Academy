@@ -43,10 +43,11 @@ app.use(cookieParser());
 // Allowed front ends: the live site, its Netlify deploy previews, local dev,
 // plus any extra comma-separated origins in CORS_ORIGINS.
 const ALLOWED_ORIGINS = [
-    'https://studynotion-project-1.netlify.app',
+    'https://nightshift-academy.netlify.app',
+    'https://studynotion-project-1.netlify.app', // old address, kept during the move
     ...(process.env.CORS_ORIGINS || '').split(',').map((o) => o.trim()).filter(Boolean),
 ];
-const PREVIEW_ORIGIN = /^https:\/\/deploy-preview-\d+--studynotion-project-1\.netlify\.app$/;
+const PREVIEW_ORIGIN = /^https:\/\/deploy-preview-\d+--(nightshift-academy|studynotion-project-1)\.netlify\.app$/;
 const LOCAL_ORIGIN = /^http:\/\/localhost:(3000|5173)$/;
 app.use(cors({
     origin: (origin, callback) => {
@@ -63,7 +64,7 @@ app.use(cors({
 // and are capped at 500 MB for lesson videos. Images are checked per route.
 app.use(fileUpload({
   useTempFiles:true,
-  tempFileDir:path.join(os.tmpdir(),'studynotion-uploads'),
+  tempFileDir:path.join(os.tmpdir(),'nightshift-uploads'),
   createParentPath:true,
   limits:{fileSize:500*1024*1024},
   abortOnLimit:true,
@@ -88,7 +89,7 @@ app.use('/api/v1/instructor',require('./routes/Instructor'));
 app.use('/api/v1/learn',require('./routes/Learn'));
 app.use('/api/v1/notifications',require('./routes/Notifications'));
 
-app.get('/',(req,res)=>{res.send(`<h1>Welcome to the StudyNotion API</h1>`)});
+app.get('/',(req,res)=>{res.send(`<h1>Welcome to the NightShift Academy API</h1>`)});
 
 // Lightweight health check, used by the keep-awake ping and for monitoring.
 app.get('/api/v1/health',(req,res)=>{

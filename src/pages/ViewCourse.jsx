@@ -26,7 +26,7 @@ export default function ViewCourse() {
       dispatch(setEntireCourseData(data.courseDetails));
       dispatch(setCompletedLectures(data.completedVideos || []));
       dispatch(setTotalNoOfLectures((data.courseDetails.courseContent || []).reduce((n, s) => n + (s.subSection?.length || 0), 0)));
-      document.title = `${data.courseDetails.courseName} · StudyNotion`;
+      document.title = `${data.courseDetails.courseName} · NightShift Academy`;
       setStatus("ready");
     } catch (error) {
       setStatus(error?.response?.status === 403 ? "forbidden" : "error");

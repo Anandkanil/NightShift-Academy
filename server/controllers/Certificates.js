@@ -53,7 +53,7 @@ exports.mine = async (req, res) => {
     const seconds = lessons.reduce((n, l) => n + (parseInt(l.timeDuration, 10) || 0), 0);
     const fields = {
       user: userId, course: courseId,
-      learnerName: [user?.firstName, user?.lastName].filter(Boolean).join(' ') || 'StudyNotion learner',
+      learnerName: [user?.firstName, user?.lastName].filter(Boolean).join(' ') || 'NightShift Academy learner',
       courseName: course.courseName,
       instructorName: [course.instructor?.firstName, course.instructor?.lastName].filter(Boolean).join(' '),
       lessons: lessons.length,

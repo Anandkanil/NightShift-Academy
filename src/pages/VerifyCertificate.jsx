@@ -9,7 +9,7 @@ import { certificateEndpoints } from "../services/apis";
 
 const formatDate = (d) => new Date(d).toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" });
 
-/** Public page that confirms a StudyNotion certificate is genuine, by its code. */
+/** Public page that confirms a NightShift Academy certificate is genuine, by its code. */
 export default function VerifyCertificate() {
   const { code: codeParam } = useParams();
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ export default function VerifyCertificate() {
   }, []);
 
   useEffect(() => {
-    document.title = "Verify a certificate · StudyNotion";
+    document.title = "Verify a certificate · NightShift Academy";
     if (codeParam) {
       setInput(codeParam);
       load(codeParam);
@@ -47,7 +47,7 @@ export default function VerifyCertificate() {
       <div className="mx-auto flex w-11/12 max-w-2xl flex-col gap-8 py-14">
         <div className="flex flex-col gap-2">
           <h1 className="font-display text-3xl font-bold text-ink">Verify a certificate</h1>
-          <p className="text-muted">Enter the certificate ID printed at the bottom of a StudyNotion certificate.</p>
+          <p className="text-muted">Enter the certificate ID printed at the bottom of a NightShift Academy certificate.</p>
         </div>
 
         <form onSubmit={onSubmit} className="flex flex-wrap gap-3">
@@ -75,7 +75,7 @@ export default function VerifyCertificate() {
                 </span>
                 <div>
                   <h2 className="font-display text-xl font-semibold text-ink">This certificate is genuine</h2>
-                  <p className="text-sm text-muted">Issued by StudyNotion · ID {cert.code}</p>
+                  <p className="text-sm text-muted">Issued by NightShift Academy · ID {cert.code}</p>
                 </div>
               </div>
               <dl className="grid gap-4 sm:grid-cols-2">
@@ -97,7 +97,7 @@ export default function VerifyCertificate() {
           {state.status === "invalid" && (
             <section className="flex flex-col gap-2 rounded-2xl border border-line bg-surface p-6">
               <h2 className="font-display text-xl font-semibold text-ink">No certificate has this ID</h2>
-              <p className="text-muted">Check the ID for typos. It looks like SN-7K4Q-2M9X. Certificates issued by StudyNotion can always be checked here.</p>
+              <p className="text-muted">Check the ID for typos. It looks like SN-7K4Q-2M9X. Certificates issued by NightShift Academy can always be checked here.</p>
             </section>
           )}
 

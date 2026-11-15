@@ -315,7 +315,7 @@ exports.setSuspension = async (req, res) => {
     forgetSuspension(target._id);
     const name = [target.firstName, target.lastName].filter(Boolean).join(' ');
     adminLog(req, suspended ? 'user.suspend' : 'user.reactivate', `${suspended ? 'Suspended' : 'Reactivated'} ${name} (${target.email})${suspended ? `: ${reason}` : ''}`, { kind: 'user', id: String(target._id) });
-    mailSender.inBackground(target.email, suspended ? 'Your StudyNotion account is suspended' : 'Your StudyNotion account is active again', suspensionEmail(target.firstName, suspended, reason));
+    mailSender.inBackground(target.email, suspended ? 'Your NightShift Academy account is suspended' : 'Your NightShift Academy account is active again', suspensionEmail(target.firstName, suspended, reason));
     return res.status(200).json({ success: true, message: suspended ? `${name} is suspended and logged out` : `${name} can log in again` });
   } catch (error) {
     return fail(res, error, "The account couldn't be updated");
@@ -397,7 +397,7 @@ exports.refundPurchase = async (req, res) => {
     const name = [purchase.user?.firstName, purchase.user?.lastName].filter(Boolean).join(' ') || 'a deleted account';
     const names = purchase.courses.map((c) => c.courseName).join(', ');
     adminLog(req, 'purchase.refund', `Refunded ₹${purchase.amount} to ${name} for ${names}: ${reason}`, { kind: 'purchase', id: purchase.orderId });
-    if (purchase.user?.email) mailSender.inBackground(purchase.user.email, 'Your StudyNotion refund', refundEmail(purchase.user.firstName, names, purchase.amount, reason));
+    if (purchase.user?.email) mailSender.inBackground(purchase.user.email, 'Your NightShift Academy refund', refundEmail(purchase.user.firstName, names, purchase.amount, reason));
     if (purchase.user?._id) notify(purchase.user._id, { type: 'refund', title: `Refund of ₹${purchase.amount.toLocaleString('en-IN')} issued`, body: `For ${names}. It usually arrives in 5–7 working days.`, link: `/dashboard/purchases/${purchase.orderId}/refund` });
     return res.status(200).json({ success: true, message: `Refunded ₹${purchase.amount.toLocaleString('en-IN')}. Access to ${names} is removed.` });
   } catch (error) {
@@ -448,7 +448,7 @@ exports.exportCsv = async (req, res) => {
     }
     adminLog(req, 'export', `Downloaded ${kind} as CSV`, { kind: 'export', id: kind });
     const stamp = new Date().toISOString().slice(0, 10);
-    res.set({ 'Content-Type': 'text/csv; charset=utf-8', 'Content-Disposition': `attachment; filename="studynotion-${kind}-${stamp}.csv"`, 'Cache-Control': 'no-store' });
+    res.set({ 'Content-Type': 'text/csv; charset=utf-8', 'Content-Disposition': `attachment; filename="nightshift-${kind}-${stamp}.csv"`, 'Cache-Control': 'no-store' });
     return res.status(200).send('\uFEFF' + csv); // BOM so Excel reads ₹ and names correctly
   } catch (error) {
     return fail(res, error, "The export couldn't be created");

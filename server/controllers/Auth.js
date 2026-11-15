@@ -55,7 +55,7 @@ exports.sendOTP = async function (req, res) {
 
         // Save the code, then email it; if the email can't be sent, say so instead of pretending
         const saved = await OTP.create({ email, otp });
-        const sent = await mailSender(email, "Your StudyNotion verification code", emailVerificationTemplate(otp));
+        const sent = await mailSender(email, "Your NightShift Academy verification code", emailVerificationTemplate(otp));
         if (!sent) {
             await OTP.deleteOne({ _id: saved._id });
             return res.status(503).json({
@@ -257,8 +257,8 @@ exports.resetPassword = async function (req, res) {
         // Send password reset confirmation email
         async function sendResetPasswordEmail(email) {
             try {
-                const body = "Your account password has been reset successfully. Please log in to your Study Notion account using the link below.";
-                const mailResponse = await mailSender(email, "Password Changed Confirmation - Study Notion", body);
+                const body = "Your account password has been reset successfully. Please log in to your NightShift Academy account using the link below.";
+                const mailResponse = await mailSender(email, "Password Changed Confirmation - NightShift Academy", body);
                 console.log("Password confirmation email sent successfully:", mailResponse);
             } catch (error) {
                 console.error("Error occurred while sending password confirmation email:", error);
@@ -321,7 +321,7 @@ exports.changePassword = async function (req, res) {
             try {
                 const body = "Your account password has been successfully changed. If you did not request this change, please contact support immediately.";
                 const emailContent=passwordUpdated(email,user.firstName)
-                mailSender.inBackground(email, "Password Changed - Study Notion", emailContent);
+                mailSender.inBackground(email, "Password Changed - NightShift Academy", emailContent);
             } catch (error) {
                 console.error("Error occurred while sending password change email:", error);
             }

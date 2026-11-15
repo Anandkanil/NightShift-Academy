@@ -30,7 +30,7 @@ async function sendWithBrevo(to, subject, html) {
       method: 'POST',
       headers: { 'api-key': BREVO_API_KEY, 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
-        sender: { name: process.env.MAIL_FROM_NAME || 'StudyNotion', email: MAIL_FROM },
+        sender: { name: process.env.MAIL_FROM_NAME || 'NightShift Academy', email: MAIL_FROM },
         to: [{ email: to }],
         subject,
         htmlContent: html,

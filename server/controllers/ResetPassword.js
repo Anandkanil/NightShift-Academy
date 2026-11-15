@@ -5,7 +5,7 @@ const passwordResetTokenMailTemplate = require('../mail/templates/passwordResetL
 const mailSender = require('../utils/mailSender');
 
 const RESET_TOKEN_TTL_MS = 15 * 60 * 1000; // 15 minutes
-const FRONTEND_URL = (process.env.FRONTEND_URL || 'https://studynotion-project-1.netlify.app').replace(/\/+$/, '');
+const FRONTEND_URL = (process.env.FRONTEND_URL || 'https://nightshift-academy.netlify.app').replace(/\/+$/, '');
 
 // Only a SHA-256 hash of the token is stored, so a leaked database row can't be used to reset a password.
 const hashToken = (token) => crypto.createHash('sha256').update(String(token)).digest('hex');

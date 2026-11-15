@@ -1,6 +1,6 @@
 /*
  * Rebuilds Purchase records for orders paid before purchases were recorded.
- * Every StudyNotion order carries the buyer and course ids in its Razorpay notes,
+ * Every NightShift Academy order carries the buyer and course ids in its Razorpay notes,
  * so the paid orders in Razorpay are the source of truth.
  *
  * Safe to run on every start: an order that already has a Purchase is left alone.

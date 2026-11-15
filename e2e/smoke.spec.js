@@ -77,5 +77,5 @@ test("privacy and terms pages are reachable from the footer", async ({ page }) =
 test("unknown pages show the not-found page", async ({ page }) => {
   await page.goto("/this-page-does-not-exist");
   await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
-  await expect(page).toHaveTitle(/StudyNotion/);
+  await expect(page).toHaveTitle(/NightShift Academy/);
 });

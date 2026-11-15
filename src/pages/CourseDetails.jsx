@@ -58,7 +58,7 @@ function Reviews({ reviews, average }) {
           </div>
           <ul className="mt-6 flex flex-col divide-y divide-line">
             {shown.map((r) => {
-              const name = [r.user?.firstName, r.user?.lastName].filter(Boolean).join(" ") || "StudyNotion learner";
+              const name = [r.user?.firstName, r.user?.lastName].filter(Boolean).join(" ") || "NightShift Academy learner";
               return (
                 <li key={r._id} className="flex gap-4 py-5 first:pt-0">
                   <img
@@ -167,7 +167,7 @@ const CourseDetails = () => {
   }, [state.status]);
 
   useEffect(() => {
-    if (course?.courseName) document.title = `${course.courseName} · StudyNotion`;
+    if (course?.courseName) document.title = `${course.courseName} · NightShift Academy`;
   }, [course?.courseName]);
 
   const stats = useMemo(() => {

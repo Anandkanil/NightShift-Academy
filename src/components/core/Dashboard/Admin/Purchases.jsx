@@ -29,7 +29,7 @@ export default function AdminPurchases() {
             Download CSV
           </Button>
         }
-      >{meta ? `${meta.total.toLocaleString("en-IN")} ${meta.total === 1 ? "order" : "orders"}, newest first.` : "Every order on StudyNotion."}</PageHeader>
+      >{meta ? `${meta.total.toLocaleString("en-IN")} ${meta.total === 1 ? "order" : "orders"}, newest first.` : "Every order on NightShift Academy."}</PageHeader>
 
       <div aria-live="polite" className="flex flex-col gap-4">
         {status === "failed" ? (

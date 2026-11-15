@@ -21,7 +21,7 @@ const CourseProgress = require('../models/CourseProgress');
 const Path = require('../models/Path');
 const catalog = require('./demoCatalog');
 
-const ASSET_BASE = (process.env.DEMO_ASSET_BASE || 'https://studynotion-project-1.netlify.app/demo').replace(/\/$/, '');
+const ASSET_BASE = (process.env.DEMO_ASSET_BASE || 'https://nightshift-academy.netlify.app/demo').replace(/\/$/, '');
 const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const emailFor = (first, last) => `${slugify(first)}.${slugify(last)}@${catalog.DOMAIN}`;
 const avatar = (first, last) => `https://api.dicebear.com/9.x/initials/svg?seed=${encodeURIComponent(`${first} ${last}`)}&bold=true`;
@@ -179,15 +179,28 @@ async function removeDemo(log = console.log) {
   return counts;
 }
 
+// After the site rename: point demo thumbnails and lesson videos at the new address
+const OLD_SITE = 'https://studynotion-project-1.netlify.app';
+async function relinkDemo(log = console.log) {
+  const NEW_SITE = ASSET_BASE.replace(/\/demo$/, '');
+  const swap = (field) => [{ $set: { [field]: { $replaceOne: { input: `$${field}`, find: OLD_SITE, replacement: NEW_SITE } } } }];
+  const c = await Course.updateMany({ thumbnail: { $regex: '^https://studynotion-project-1\\.netlify\\.app/' } }, swap('thumbnail'));
+  const l = await SubSection.updateMany({ videoUrl: { $regex: '^https://studynotion-project-1\\.netlify\\.app/' } }, swap('videoUrl'));
+  const counts = { thumbnails: c.modifiedCount || 0, videos: l.modifiedCount || 0 };
+  log(`Demo relink: ${JSON.stringify(counts)}`);
+  return counts;
+}
+
 async function runDemoSeed(mode = process.env.SEED_DEMO) {
   const m = String(mode || '').trim().toLowerCase();
   try {
     if (m === 'add') return await seedDemo();
     if (m === 'remove') return await removeDemo();
+    if (m === 'relink') return await relinkDemo();
   } catch (e) {
     console.error('Demo seed failed:', e.message);
   }
   return null;
 }
 
-module.exports = { seedDemo, removeDemo, runDemoSeed, emailFor, slugify };
+module.exports = { seedDemo, removeDemo, relinkDemo, runDemoSeed, emailFor, slugify };

@@ -275,7 +275,7 @@ export default function StudentOverview() {
         <h1 className="text-3xl font-bold tracking-tight text-ink">
           {greeting}, {user?.firstName}
         </h1>
-        <p className="mt-1 text-muted">Your learning across StudyNotion, in one place.</p>
+        <p className="mt-1 text-muted">Your learning across NightShift Academy, in one place.</p>
       </div>
 
       <div role="tablist" aria-label="Dashboard views" className="flex w-fit gap-1 rounded-xl border border-line bg-surface p-1">

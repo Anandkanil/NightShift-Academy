@@ -57,7 +57,7 @@ export default function Certificate() {
   };
 
   useEffect(() => {
-    if (finished && course?.courseName) document.title = `Certificate · ${course.courseName} · StudyNotion`;
+    if (finished && course?.courseName) document.title = `Certificate · ${course.courseName} · NightShift Academy`;
   }, [finished, course?.courseName]);
 
   if (state.status === "loading") {
@@ -138,13 +138,13 @@ export default function Certificate() {
         <div className="relative flex h-full flex-col items-center justify-between px-[9%] py-[8%] text-center">
           <div className="flex items-center gap-2.5">
             <LogoMark size={34} />
-            <span className="font-display text-lg font-semibold tracking-tight">StudyNotion</span>
+            <span className="font-display text-lg font-semibold tracking-tight">NightShift Academy</span>
           </div>
 
           <div className="flex flex-col items-center gap-[0.6em] text-[clamp(9px,2.1cqw,18px)]">
             <p className="font-display text-[1.6em] font-medium text-[#0F0F0F]">Certificate of completion</p>
             <p className="text-[#4A4F6E]">This certifies that</p>
-            <p className="font-display text-[2.6em] font-bold leading-tight">{learner || "StudyNotion learner"}</p>
+            <p className="font-display text-[2.6em] font-bold leading-tight">{learner || "NightShift Academy learner"}</p>
             <div className="h-[2px] w-1/2 bg-[#AC84EB]" aria-hidden="true" />
             <p className="text-[#4A4F6E]">has completed the course</p>
             <p className="max-w-[90%] font-display text-[1.6em] font-medium leading-snug">{course.courseName}</p>

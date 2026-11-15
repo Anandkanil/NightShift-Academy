@@ -64,7 +64,7 @@ export default function AdminOverview() {
 
   return (
     <div className="flex flex-col gap-8">
-      <PageHeader title="Admin overview">Sales, learners and courses across StudyNotion.</PageHeader>
+      <PageHeader title="Admin overview">Sales, learners and courses across NightShift Academy.</PageHeader>
 
       <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
         <Stat label="Revenue" value={rupees(totals.revenue)} hint={`${rupees(thisMonth.revenue)} this month`} to="/dashboard/admin/purchases" />

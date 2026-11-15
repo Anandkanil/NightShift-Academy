@@ -1,8 +1,8 @@
-# StudyNotion
+# NightShift Academy
 
 An online learning platform where instructors publish video courses and students buy them, learn at their own pace and earn certificates. It's built with the MERN stack: MongoDB, Express, React and Node.js.
 
-**Live site:** https://studynotion-project-1.netlify.app
+**Live site:** https://nightshift-academy.netlify.app
 
 To look around without signing up, open **Log in** and choose **Try as student**, **Try as instructor** or **Try as admin**. Demo accounts are read-only. The first visit after a quiet spell can take up to a minute while the free server wakes up.
 
@@ -82,8 +82,8 @@ netlify/functions/       Scheduled keep-awake ping
 You'll need Node.js 20 or later, plus a MongoDB database (local or Atlas).
 
 ```sh
-git clone https://github.com/Anandkanil/Study-Notion-Project.git
-cd Study-Notion-Project
+git clone https://github.com/Anandkanil/NightShift-Academy.git
+cd NightShift-Academy
 npm install
 cd server && npm install && cd ..
 ```
@@ -101,7 +101,7 @@ Create `server/.env`:
 MONGODB_URL=<MongoDB connection string>
 JWT_SECRET=<a long random string>
 FRONTEND_URL=http://localhost:3000
-CLOUDINARY_CLOUD_NAME=…  CLOUDINARY_API_KEY=…  CLOUDINARY_API_SECRET=…  FOLDER_NAME=StudyNotion
+CLOUDINARY_CLOUD_NAME=…  CLOUDINARY_API_KEY=…  CLOUDINARY_API_SECRET=…  FOLDER_NAME=NightShift Academy
 RAZORPAY_KEY_ID=…  RAZORPAY_KEY_SECRET=…
 BREVO_API_KEY=…  MAIL_FROM=<verified sender address>
 # Optional: GOOGLE_CLIENT_ID, GITHUB_CLIENT_ID, GITHUB_CLIENT_SECRET, CONTACT_EMAIL, ALERT_EMAIL
