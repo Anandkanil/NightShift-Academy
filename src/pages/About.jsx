@@ -19,7 +19,7 @@ export default function About() {
             Practical tech skills, taught one lesson at a time.
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
-            StudyNotion is an online course platform for web development, cloud computing, machine learning, UI/UX and cybersecurity. Instructors build courses from short video lessons; learners buy the courses they need and work through them at their own pace.
+            NightShift Academy is an online course platform for web development, cloud computing, machine learning, UI/UX and cybersecurity. Instructors build courses from short video lessons; learners buy the courses they need and work through them at their own pace.
           </p>
         </div>
       </section>

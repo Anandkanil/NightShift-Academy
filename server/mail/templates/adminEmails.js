@@ -1,11 +1,11 @@
 // Emails sent as a result of admin actions.
 const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const SITE = (process.env.FRONTEND_URL || 'https://studynotion-project-1.netlify.app').replace(/\/$/, '');
+const SITE = (process.env.FRONTEND_URL || 'https://nightshift-academy.netlify.app').replace(/\/$/, '');
 
 const shell = (title, body, button) => `<!DOCTYPE html>
 <html><body style="margin:0;background:#F6F6FB;font-family:Arial,Helvetica,sans-serif;color:#14172E">
   <div style="max-width:560px;margin:0 auto;padding:32px 24px">
-    <p style="font-size:20px;font-weight:bold;margin:0 0 24px">StudyNotion</p>
+    <p style="font-size:20px;font-weight:bold;margin:0 0 24px">NightShift Academy</p>
     <h1 style="font-size:22px;margin:0 0 12px">${title}</h1>
     ${body}
     ${button ? `<a href="${button.href}" style="display:inline-block;margin-top:8px;background:#F5B841;color:#14172E;font-weight:bold;text-decoration:none;padding:12px 22px;border-radius:12px">${button.text}</a>` : ''}
@@ -35,5 +35,5 @@ exports.refundEmail = (firstName, courseNames, amount, reason) =>
 
 exports.suspensionEmail = (firstName, suspended, reason) =>
   suspended
-    ? shell('Your account is suspended', p(`Hi ${esc(firstName)}, your StudyNotion account has been suspended, so you can't log in for now.`) + p(`Reason: ${esc(reason)}`) + p('Reply to this email if you think this is a mistake.'))
-    : shell('Your account is active again', p(`Hi ${esc(firstName)}, your StudyNotion account has been reactivated. You can log in as usual.`), { href: `${SITE}/login`, text: 'Log in' });
+    ? shell('Your account is suspended', p(`Hi ${esc(firstName)}, your NightShift Academy account has been suspended, so you can't log in for now.`) + p(`Reason: ${esc(reason)}`) + p('Reply to this email if you think this is a mistake.'))
+    : shell('Your account is active again', p(`Hi ${esc(firstName)}, your NightShift Academy account has been reactivated. You can log in as usual.`), { href: `${SITE}/login`, text: 'Log in' });

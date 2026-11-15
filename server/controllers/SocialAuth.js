@@ -143,7 +143,7 @@ exports.github = async (req, res) => {
     if (!tokenBody.access_token) {
       return res.status(401).json({ success: false, message: 'GitHub sign-in expired. Please try again.' });
     }
-    const gh = { Authorization: `Bearer ${tokenBody.access_token}`, Accept: 'application/vnd.github+json', 'User-Agent': 'StudyNotion' };
+    const gh = { Authorization: `Bearer ${tokenBody.access_token}`, Accept: 'application/vnd.github+json', 'User-Agent': 'NightShift Academy' };
     const [profileRes, emailsRes] = await Promise.all([http('https://api.github.com/user', { headers: gh }), http('https://api.github.com/user/emails', { headers: gh })]);
     const profile = await profileRes.json();
     const emails = emailsRes.ok ? await emailsRes.json() : [];

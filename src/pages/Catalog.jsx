@@ -85,7 +85,7 @@ const Catalog = () => {
   }, [load]);
 
   useEffect(() => {
-    if (state.category) document.title = `${state.category.name} courses · StudyNotion`;
+    if (state.category) document.title = `${state.category.name} courses · NightShift Academy`;
   }, [state.category]);
 
   const allCourses = state.data?.selectedCategory?.courses || [];
@@ -219,7 +219,7 @@ const Catalog = () => {
         {popularEverywhere.length > 0 && (
           <section aria-labelledby="cat-top">
             <h2 id="cat-top" className="mb-5 font-display text-2xl font-medium text-ink">
-              Most enrolled across StudyNotion
+              Most enrolled across NightShift Academy
             </h2>
             <CourseGrid courses={popularEverywhere.slice(0, 6)} />
           </section>

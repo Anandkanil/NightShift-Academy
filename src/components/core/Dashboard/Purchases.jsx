@@ -101,7 +101,7 @@ export function Receipt({ refund: isRefund = false }) {
   const p = list.find((x) => x.orderId === orderId);
 
   useEffect(() => {
-    if (p) document.title = `${isRefund ? "Refund receipt" : "Receipt"} · ${dateText(isRefund && p.refund ? p.refund.at : p.createdAt)} · StudyNotion`;
+    if (p) document.title = `${isRefund ? "Refund receipt" : "Receipt"} · ${dateText(isRefund && p.refund ? p.refund.at : p.createdAt)} · NightShift Academy`;
   }, [p, isRefund]);
 
   if (status === "loading") return <div role="status" aria-label="Loading receipt" className="skeleton h-[480px] w-full max-w-3xl rounded-2xl" />;
@@ -134,7 +134,7 @@ export function Receipt({ refund: isRefund = false }) {
         <div className="flex flex-wrap items-start justify-between gap-6 border-b border-[#DADCE8] pb-6">
           <div className="flex items-center gap-2.5">
             <LogoMark size={34} />
-            <span className="font-display text-lg font-semibold">StudyNotion</span>
+            <span className="font-display text-lg font-semibold">NightShift Academy</span>
           </div>
           <div className="text-right">
             <p className="font-display text-2xl font-medium">Payment receipt</p>
@@ -145,7 +145,7 @@ export function Receipt({ refund: isRefund = false }) {
         <dl className="grid gap-4 border-b border-[#DADCE8] py-6 text-sm sm:grid-cols-2">
           <div>
             <dt className="text-[#4A4F6E]">Billed to</dt>
-            <dd className="font-bold">{buyer || "StudyNotion learner"}</dd>
+            <dd className="font-bold">{buyer || "NightShift Academy learner"}</dd>
             {user?.email && <dd>{user.email}</dd>}
           </div>
           <div className="sm:text-right">
@@ -201,7 +201,7 @@ export function Receipt({ refund: isRefund = false }) {
 const Brand = () => (
   <div className="flex items-center gap-2.5">
     <LogoMark size={34} />
-    <span className="font-display text-lg font-semibold">StudyNotion</span>
+    <span className="font-display text-lg font-semibold">NightShift Academy</span>
   </div>
 );
 
@@ -231,7 +231,7 @@ function RefundReceipt({ p, buyer, email }) {
         <dl className="grid gap-4 border-b border-[#DADCE8] py-6 text-sm sm:grid-cols-2">
           <div>
             <dt className="text-[#4A4F6E]">Refunded to</dt>
-            <dd className="font-bold">{buyer || "StudyNotion learner"}</dd>
+            <dd className="font-bold">{buyer || "NightShift Academy learner"}</dd>
             {email && <dd>{email}</dd>}
             <dt className="mt-2 text-[#4A4F6E]">Original payment</dt>
             <dd>{dateText(p.createdAt)}</dd>

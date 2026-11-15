@@ -61,7 +61,7 @@ export default function LoginForm() {
         Log in
       </Button>
       <p className="text-center text-muted">
-        New to StudyNotion?{" "}
+        New to NightShift Academy?{" "}
         <Link to="/signup" className="font-semibold text-accent-text hover:underline">
           Create an account
         </Link>

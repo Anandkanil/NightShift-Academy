@@ -33,7 +33,7 @@ exports.contactUsController = async (req, res) => {
     <p style="white-space:pre-wrap">${escapeHtml(message)}</p>`;
 
   try {
-    const sent = await mailSender(inbox, `Study Notion contact: ${escapeHtml(firstname)}`, body);
+    const sent = await mailSender(inbox, `NightShift Academy contact: ${escapeHtml(firstname)}`, body);
     if (!sent) throw new Error("Mail not sent");
     return res.status(200).json({ success: true, message: "Thanks! Your message has been sent." });
   } catch (error) {

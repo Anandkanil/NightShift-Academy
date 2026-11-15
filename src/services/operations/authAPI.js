@@ -141,7 +141,7 @@ export function socialLogin(provider, payload, navigate, redirectTo) {
       dispatch(setToken(token));
       localStorage.setItem("user", JSON.stringify(user));
       localStorage.setItem("token", JSON.stringify(token));
-      toast.success(response.data.created ? `Welcome to StudyNotion, ${user.firstName || "there"}!` : `Welcome back, ${user.firstName || "there"}!`, { id });
+      toast.success(response.data.created ? `Welcome to NightShift Academy, ${user.firstName || "there"}!` : `Welcome back, ${user.firstName || "there"}!`, { id });
       navigate(redirectTo || homeFor(user.accountType), { replace: true });
       return true;
     } catch (error) {

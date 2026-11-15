@@ -67,19 +67,19 @@ const otpTemplate = (otp) => {
 	<body>
 		<div class="container">
 			 <a href="">
-			 <img src="https://i.ibb.co/8X3P5Q0/email-logo.png" alt="StudyNotion Logo" class="logo">
+			 <img src="https://i.ibb.co/8X3P5Q0/email-logo.png" alt="NightShift Academy Logo" class="logo">
 			 </a>
 			 <div class="message">OTP Verification Email</div>
 			 <div class="body">
 			 <p>Dear User,</p>
-				<p>Thank you for registering with StudyNotion. To complete your registration, please use the following OTP
+				<p>Thank you for registering with NightShift Academy. To complete your registration, please use the following OTP
 				(One-Time Password) to verify your account:</p>
 				<h2 class="highlight">${otp}</h2>
 				<p>This OTP is valid for 5 minutes. If you did not request this verification, please disregard this email.
 				Once your account is verified, you will have access to our platform and its features.</p>
 				</div>
 				<div class="support">If you have any questions or need assistance, please feel free to reach out to us at <a
-				href="mailto:studynotionbiz@gmail.com">studynotionbiz@gmail.com</a>. We are here to help!</div>
+				href="mailto:nightshiftacademyy@gmail.com">nightshiftacademyy@gmail.com</a>. We are here to help!</div>
 		</div>
 	</body>
 	

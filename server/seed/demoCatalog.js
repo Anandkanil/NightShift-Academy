@@ -1,5 +1,5 @@
 /*
- * Demo catalogue for StudyNotion: fictional instructors, extra categories, courses
+ * Demo catalogue for NightShift Academy: fictional instructors, extra categories, courses
  * with sections and lessons, demo students and guided paths.
  *
  * Every demo account uses the reserved .test domain (RFC 2606), so no address can

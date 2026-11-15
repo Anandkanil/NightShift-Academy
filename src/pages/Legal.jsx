@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/common/Footer";
 
-const CONTACT = "studynotionbiz@gmail.com";
+const CONTACT = "nightshiftacademyy@gmail.com";
 const UPDATED = "13 November 2026";
 
 const Section = ({ title, children }) => (
@@ -35,12 +35,12 @@ function Privacy() {
           <li>To run your account, show your courses and progress, and issue certificates.</li>
           <li>To process payments and refunds, and send receipts.</li>
           <li>To send emails you need: sign-up codes, password resets, receipts, course updates from your instructors, answers to your questions and, if you keep them on, learning reminders.</li>
-          <li>To keep StudyNotion secure, for example by limiting repeated login attempts.</li>
+          <li>To keep NightShift Academy secure, for example by limiting repeated login attempts.</li>
         </ul>
         <p>We don't sell your data, and we don't show ads.</p>
       </Section>
       <Section title="Who else handles it">
-        <p>StudyNotion uses these services to run. Each receives only what it needs:</p>
+        <p>NightShift Academy uses these services to run. Each receives only what it needs:</p>
         <ul>
           <li><strong>MongoDB Atlas</strong>: stores the database.</li>
           <li><strong>Render</strong> and <strong>Netlify</strong>: host the server and the website.</li>
@@ -71,7 +71,7 @@ function Privacy() {
 function Terms() {
   return (
     <>
-      <Section title="Using StudyNotion">
+      <Section title="Using NightShift Academy">
         <ul>
           <li>Give accurate details when you create an account, and keep your password private. You're responsible for what happens in your account.</li>
           <li>Don't misuse the service: no attempts to break in, scrape content, overload the servers or harass other people.</li>
@@ -80,7 +80,7 @@ function Terms() {
       </Section>
       <Section title="Courses and content">
         <ul>
-          <li>Buying a course gives you personal access to watch it. Course videos and materials belong to their instructors and StudyNotion. Don't download, share or resell them.</li>
+          <li>Buying a course gives you personal access to watch it. Course videos and materials belong to their instructors and NightShift Academy. Don't download, share or resell them.</li>
           <li>Instructors are responsible for their courses. Courses are reviewed before they're published.</li>
           <li>Reviews, questions and notes you post should be your own and respectful. We may hide content that isn't.</li>
         </ul>
@@ -93,13 +93,13 @@ function Terms() {
       </Section>
       <Section title="Certificates">
         <p>
-          Certificates confirm that you finished every lesson in a course on StudyNotion. They aren't an accredited qualification. Anyone can check a certificate at{" "}
-          <Link to="/verify" className="font-semibold text-accent-text underline-offset-4 hover:underline">studynotion-project-1.netlify.app/verify</Link>.
+          Certificates confirm that you finished every lesson in a course on NightShift Academy. They aren't an accredited qualification. Anyone can check a certificate at{" "}
+          <Link to="/verify" className="font-semibold text-accent-text underline-offset-4 hover:underline">nightshift-academy.netlify.app/verify</Link>.
         </p>
       </Section>
       <Section title="The service">
         <p>
-          We work to keep StudyNotion available and accurate, but it's provided as it is, and features may change. We may update these terms. If we make an important change, we'll show a notice on the site.
+          We work to keep NightShift Academy available and accurate, but it's provided as it is, and features may change. We may update these terms. If we make an important change, we'll show a notice on the site.
         </p>
         <p>Questions? Email <Mail />.</p>
       </Section>
@@ -112,7 +112,7 @@ export default function Legal({ page }) {
   const isPrivacy = page === "privacy";
   const title = isPrivacy ? "Privacy Policy" : "Terms of Use";
   useEffect(() => {
-    document.title = `${title} · StudyNotion`;
+    document.title = `${title} · NightShift Academy`;
     window.scrollTo(0, 0);
   }, [title]);
 
@@ -124,8 +124,8 @@ export default function Legal({ page }) {
           <p className="text-muted">Last updated {UPDATED}</p>
           <p className="text-muted">
             {isPrivacy
-              ? "This explains what StudyNotion collects when you use it, why, and the choices you have."
-              : "These terms apply when you use StudyNotion. By creating an account or buying a course, you agree to them."}
+              ? "This explains what NightShift Academy collects when you use it, why, and the choices you have."
+              : "These terms apply when you use NightShift Academy. By creating an account or buying a course, you agree to them."}
           </p>
         </header>
         {isPrivacy ? <Privacy /> : <Terms />}

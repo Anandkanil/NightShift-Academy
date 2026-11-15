@@ -44,9 +44,9 @@ function sendAlert({ title, route, details }) {
       ${details ? `<p>${escapeHtml(details)}</p>` : ''}
       <p><b>Recent error log:</b></p>
       <pre style="background:#F3F4F8;padding:12px;white-space:pre-wrap">${escapeHtml(recentErrors.join('\n') || '(none)')}</pre>
-      <p style="color:#4A4F6E">Alert ${sentToday} of ${DAILY_MAX} today. Same route won't alert again for 30 minutes. Full logs: Render dashboard → Study-Notion-Project-1 → Logs.</p>
+      <p style="color:#4A4F6E">Alert ${sentToday} of ${DAILY_MAX} today. Same route won't alert again for 30 minutes. Full logs: Render dashboard → NightShift-Academy-1 → Logs.</p>
     </div>`;
-  mailSender.inBackground(to, `StudyNotion alert: ${title}`, html);
+  mailSender.inBackground(to, `NightShift Academy alert: ${title}`, html);
   return true;
 }
 

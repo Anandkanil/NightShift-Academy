@@ -22,7 +22,7 @@ for i, name in enumerate(students, start=1):
 print("Total:", sum([3, 5, 8]))
 `,
   html: `<main class="card">
-  <h1>Hello, StudyNotion</h1>
+  <h1>Hello, NightShift Academy</h1>
   <p>Edit the HTML, CSS and JS tabs. The preview updates as you type.</p>
   <button id="btn">Click me</button>
 </main>

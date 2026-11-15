@@ -6,7 +6,7 @@ import Footer from "../components/common/Footer";
 /** Public code playground: try JavaScript, Python or a small web page without installing anything. */
 export default function PlaygroundPage() {
   useEffect(() => {
-    document.title = "Code playground · StudyNotion";
+    document.title = "Code playground · NightShift Academy";
   }, []);
   return (
     <div className="flex flex-col">

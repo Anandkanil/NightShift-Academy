@@ -18,7 +18,7 @@ export function AuthLayout({ title, subtitle, children }) {
         <div className="mt-6">{children}</div>
       </div>
 
-      <aside aria-label="Why StudyNotion" className="hidden rounded-3xl border border-line bg-surface p-8 md:block">
+      <aside aria-label="Why NightShift Academy" className="hidden rounded-3xl border border-line bg-surface p-8 md:block">
         <div className="rounded-2xl bg-[rgb(10_10_10)] p-6" aria-hidden="true">
           <div className="flex items-center gap-3">
             <span className="grid h-12 w-12 place-items-center rounded-full bg-accent">

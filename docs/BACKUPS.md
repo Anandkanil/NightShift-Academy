@@ -20,7 +20,7 @@ under **Actions → Weekly database backup → (a run) → Artifacts**.
 ```sh
 # 1. Download and unzip the artifact, then decrypt it
 openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 \
-  -in studynotion-YYYY-MM-DD.archive.gz.enc -out db.archive.gz -pass pass:'YOUR-PASSPHRASE'
+  -in nightshift-YYYY-MM-DD.archive.gz.enc -out db.archive.gz -pass pass:'YOUR-PASSPHRASE'
 
 # 2. Restore into a separate database first to check it
 #    (DBNAME = the database name at the end of MONGODB_URL)

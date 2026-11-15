@@ -248,7 +248,7 @@ export default function AppSidebar({ collapsed, mobileOpen, onCloseMobile }) {
   const askLogout = () =>
     setConfirm({
       tone: "warning",
-      text1: "Log out of StudyNotion?",
+      text1: "Log out of NightShift Academy?",
       text2: "You'll need to sign in again to keep learning on this device.",
       btn1Text: "Log out",
       btn2Text: "Stay",
@@ -275,9 +275,9 @@ export default function AppSidebar({ collapsed, mobileOpen, onCloseMobile }) {
   // Desktop can fold to an icon rail; the phone drawer always shows labels
   const renderBody = (collapsed) => (
     <div className="flex h-full flex-col gap-2 px-3 pb-3">
-      <Link to="/" className={`flex h-[68px] shrink-0 items-center gap-2.5 border-b border-line ${collapsed ? "justify-center" : "px-2"}`} aria-label="StudyNotion home">
+      <Link to="/" className={`flex h-[68px] shrink-0 items-center gap-2.5 border-b border-line ${collapsed ? "justify-center" : "px-2"}`} aria-label="NightShift Academy home">
         <LogoMark size={32} />
-        {!collapsed && <span className="text-xl font-bold tracking-tight text-ink">StudyNotion</span>}
+        {!collapsed && <span className="text-xl font-bold tracking-tight text-ink">NightShift Academy</span>}
       </Link>
 
       <nav aria-label="Dashboard" className="mt-2 flex flex-1 flex-col gap-1 overflow-y-auto">

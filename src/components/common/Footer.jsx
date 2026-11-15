@@ -42,13 +42,13 @@ export default function Footer() {
             Video courses in web development, cloud, machine learning, UI/UX and security. Learn at your own pace and pick up exactly where you stopped.
           </p>
         </div>
-        <Column title="StudyNotion" links={[["About", "/about"], ["Contact", "/contact"]]} />
+        <Column title="NightShift Academy" links={[["About", "/about"], ["Contact", "/contact"]]} />
         <Column title="Your account" links={account} />
         <Column title="Teach" links={[["Become an instructor", "/signup"]]} />
       </div>
       <div className="border-t border-line">
         <div className="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-5 text-sm text-muted">
-          <p>© {new Date().getFullYear()} StudyNotion</p>
+          <p>© {new Date().getFullYear()} NightShift Academy</p>
           <nav aria-label="Legal" className="flex gap-5">
             <Link to="/privacy" className="transition-colors hover:text-ink">Privacy Policy</Link>
             <Link to="/terms" className="transition-colors hover:text-ink">Terms of Use</Link>

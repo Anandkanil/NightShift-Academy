@@ -14,7 +14,7 @@ const mailSender = require('./mailSender');
 const { summarize, dayKey } = require('./learningDays');
 const { weeklyDigestEmail } = require('../mail/templates/weeklyDigestEmail');
 
-const FRONTEND_URL = (process.env.FRONTEND_URL || 'https://studynotion-project-1.netlify.app').replace(/\/$/, '');
+const FRONTEND_URL = (process.env.FRONTEND_URL || 'https://nightshift-academy.netlify.app').replace(/\/$/, '');
 const API_URL = (process.env.PUBLIC_API_URL || 'https://study-notion-project-1-px3q.onrender.com').replace(/\/$/, '');
 const BATCH = 40;
 const DAILY_CAP = 200;
@@ -80,7 +80,7 @@ async function runWeeklyDigest(now = new Date(), log = console.log) {
       firstName: user.firstName, thisWeek: s.thisWeek, weeklyGoal: s.weeklyGoal, currentStreak: s.currentStreak,
       continueTitle, continueUrl, unsubscribeUrl: unsubscribeUrl(user._id), settingsUrl: `${FRONTEND_URL}/dashboard/settings`,
     });
-    const subject = s.thisWeek >= s.weeklyGoal && s.thisWeek > 0 ? 'You hit your weekly goal' : 'Your week on StudyNotion';
+    const subject = s.thisWeek >= s.weeklyGoal && s.thisWeek > 0 ? 'You hit your weekly goal' : 'Your week on NightShift Academy';
     if (await mailSender(user.email, subject, html)) sent++;
   }
   if (candidates.length) log(`Weekly digest: sent ${sent} of ${candidates.length}`);
