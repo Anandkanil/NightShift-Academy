@@ -25,4 +25,4 @@ jobs:
       - name: Ping the health check
         run: |
           curl --silent --show-error --fail --max-time 90 --retry 2 --retry-delay 15 \
-            https://study-notion-project-1-px3q.onrender.com/api/v1/health
+            https://nightshift-academy-api.onrender.com/api/v1/health

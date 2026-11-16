@@ -15,7 +15,7 @@ const { summarize, dayKey } = require('./learningDays');
 const { weeklyDigestEmail } = require('../mail/templates/weeklyDigestEmail');
 
 const FRONTEND_URL = (process.env.FRONTEND_URL || 'https://nightshift-academy.netlify.app').replace(/\/$/, '');
-const API_URL = (process.env.PUBLIC_API_URL || 'https://study-notion-project-1-px3q.onrender.com').replace(/\/$/, '');
+const API_URL = (process.env.PUBLIC_API_URL || 'https://nightshift-academy-api.onrender.com').replace(/\/$/, '');
 const BATCH = 40;
 const DAILY_CAP = 200;
 const SEND_FROM_HOUR = 10; // India time, Sunday 10 am to 8 pm
